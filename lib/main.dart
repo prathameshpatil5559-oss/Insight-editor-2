@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'screens/dashboard_screen.dart';
 import 'screens/reels_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/followers_screen.dart';
+import 'screens/engagement_screen.dart';
 
 void main() {
   runApp(const InstagramRaftarApp());
@@ -40,6 +42,8 @@ class _MainNavigationState extends State<MainNavigation> {
   final List<Widget> _screens = const [
     DashboardScreen(),
     ReelsScreen(),
+    FollowersScreen(),
+    EngagementScreen(),
     ProfileScreen(),
   ];
 
@@ -67,6 +71,16 @@ class _MainNavigationState extends State<MainNavigation> {
             icon: Icon(Icons.play_circle_outline),
             selectedIcon: Icon(Icons.play_circle),
             label: 'Reels',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.people_outline),
+            selectedIcon: Icon(Icons.people),
+            label: 'Followers',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.favorite_border),
+            selectedIcon: Icon(Icons.favorite),
+            label: 'Engagement',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
